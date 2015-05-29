@@ -43,6 +43,22 @@ msbuild /m /v:n /p:Configuration=StaticDebug /p:Platform=x64 %solution% >> %log%
 ECHO Configuration=StaticRelease
 msbuild /m /v:n /p:Configuration=StaticRelease /p:Platform=x64 %solution% >> %log%
 
+CALL %environment% ARM > nul
+ECHO Platform=ARM
+
+ECHO Configuration=DynDebug
+msbuild /m /v:n /p:Configuration=DynDebug /p:Platform=ARM %solution% > %log%
+ECHO Configuration=DynRelease
+msbuild /m /v:n /p:Configuration=DynRelease /p:Platform=ARM %solution% >> %log%
+ECHO Configuration=LtcgDebug
+msbuild /m /v:n /p:Configuration=LtcgDebug /p:Platform=ARM %solution% >> %log%
+ECHO Configuration=LtcgRelease
+msbuild /m /v:n /p:Configuration=LtcgRelease /p:Platform=ARM %solution% >> %log%
+ECHO Configuration=StaticDebug
+msbuild /m /v:n /p:Configuration=StaticDebug /p:Platform=ARM %solution% >> %log%
+ECHO Configuration=StaticRelease
+msbuild /m /v:n /p:Configuration=StaticRelease /p:Platform=ARM %solution% >> %log%
+
 ECHO Complete: %solution%
 GOTO end
 
