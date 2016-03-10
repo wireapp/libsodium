@@ -34,3 +34,25 @@ In order to join, just send a random mail to `sodium-subscribe` {at}
 ## License
 
 [ISC license](https://en.wikipedia.org/wiki/ISC_license).
+
+## Wire Fork
+
+The Wire fork differs from upstream only in that it exposes several
+additional functions in the Emscripten build.
+
+The additional functions are as follows:
+
+ - `crypto_hash_sha256`
+ - `crypto_hash_sha256_bytes`
+ - `crypto_auth_hmacsha256`
+ - `crypto_auth_hmacsha256_verify`
+ - `crypto_auth_hmacsha256_bytes`
+ - `crypto_auth_hmacsha256_keybytes`
+ - `crypto_auth_hmacsha512`
+ - `crypto_auth_hmacsha512_verify`
+ - `crypto_auth_hmacsha512_bytes`
+ - `crypto_auth_hmacsha512_keybytes`
+ - `crypto_stream_chacha20_xor`
+ - `crypto_stream_chacha20_xor_ic`
+ - `crypto_stream_chacha20_noncebytes`
+ - `crypto_stream_chacha20_keybytes`
