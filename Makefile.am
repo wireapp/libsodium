@@ -10,6 +10,7 @@ EXTRA_DIST = \
 	THANKS
 
 SUBDIRS = \
+	builds \
 	dist-build \
 	msvc-scripts \
 	src \
@@ -17,5 +18,6 @@ SUBDIRS = \
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = @PACKAGE_NAME@.pc
+
 DISTCLEANFILES = $(pkgconfig_DATA)
 
