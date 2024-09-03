@@ -209,35 +209,35 @@ jobs:
       DOTNET_SYSTEM_GLOBALIZATION_INVARIANT: 1
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: build-win-x64
           path: .libsodium-pack/runtimes/win-x64/native/
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: build-win-x86
           path: .libsodium-pack/runtimes/win-x86/native/
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: build-linux-x64
           path: .libsodium-pack/runtimes/linux-x64/native/
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: build-linux-arm64
           path: .libsodium-pack/runtimes/linux-arm64/native/
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: build-linux-arm
           path: .libsodium-pack/runtimes/linux-arm/native/
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: build-linux-musl-x64
           path: .libsodium-pack/runtimes/linux-musl-x64/native/
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: build-osx-x64
           path: .libsodium-pack/runtimes/osx-x64/native/
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: build-osx-arm64
           path: .libsodium-pack/runtimes/osx-arm64/native/
@@ -262,7 +262,7 @@ jobs:
       DOTNET_SYSTEM_GLOBALIZATION_INVARIANT: 1
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: nuget-package
           path: .libsodium-pack/
@@ -323,7 +323,7 @@ jobs:
 
           sudo apt-get update && sudo apt-get install -y qemu-user qemu-user-static libstdc++6:armhf libstdc++6:arm64
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: test-builds
           path: .libsodium-builds/
